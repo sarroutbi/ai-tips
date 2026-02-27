@@ -1,0 +1,15 @@
+Different AI Comparison frameworks:
+-----------------------------------
+Framework                               Best Used For                                       Focus
+Persona/Context/Task/Constraints/Format "Complex, highly specific, high-stakes tasks."      Ultimate control.
+RTF                                     "Quick, everyday tasks. Speed and efficiency."      Simplicity.
+Few-Shot                                "Matching a specific tone, style, or data format."  Pattern matching.
+Chain-of-Thought                        "Math, logic puzzles, strategic planning."          Accuracy and reasoning.
+BAB                                     "Marketing, sales, persuasive writing."             Emotional engagement.
+-----------------------------------
+Example for Persona/Context/Task/Constraint/Format:
+[Persona] Act as a Lead Infrastructure Architect who is highly interested in deploying the Keylime project across our enterprise cluster.
+[Context] We need a centralized dashboard monitoring tool. This tool must capture all the functionality required for our system administrators to effectively monitor, operate, and troubleshoot the Keylime architecture (including the Verifier, Registrar, and Agents).
+[Task] Draft a comprehensive, slide-by-slide presentation proposing the design and features of this Keylime Dashboard.
+[Constraints] Make the presentation as extensive as possible. For each slide, detail the specific metrics, logs, or controls that should be visible on the screen.
+[Format]
