@@ -1,3 +1,4 @@
+-----------------------------------
 Different AI Comparison frameworks:
 -----------------------------------
 Framework                               Best Used For                                       Focus
@@ -7,9 +8,49 @@ Few-Shot                                "Matching a specific tone, style, or dat
 Chain-of-Thought                        "Math, logic puzzles, strategic planning."          Accuracy and reasoning.
 BAB                                     "Marketing, sales, persuasive writing."             Emotional engagement.
 -----------------------------------
+----------------------------------------------------
+Starting for Persona/Context/Task/Constraint/Format:
+----------------------------------------------------
+[Persona]
+[Context]
+[Task]
+[Constraints]
+[Format]
+Altogether:
+[Persona] [Context] [Task] [Constraints] [Format]
+---------------------------------------------------
 Example for Persona/Context/Task/Constraint/Format:
+---------------------------------------------------
 [Persona] Act as a Lead Infrastructure Architect who is highly interested in deploying the Keylime project across our enterprise cluster.
 [Context] We need a centralized dashboard monitoring tool. This tool must capture all the functionality required for our system administrators to effectively monitor, operate, and troubleshoot the Keylime architecture (including the Verifier, Registrar, and Agents).
 [Task] Draft a comprehensive, slide-by-slide presentation proposing the design and features of this Keylime Dashboard.
 [Constraints] Make the presentation as extensive as possible. For each slide, detail the specific metrics, logs, or controls that should be visible on the screen.
-[Format]
+[Format] Output your review as a structured Markdown document using the following sections:
+Executive Summary of Risks
+Architectural & Scalability Inconsistencies
+Security Constraints & Threat Model Gaps
+Customer/Operator Requirement Gaps
+-------------------------------------------------------------------
+Example for Persona/Context/Task/Constraint/Format for code review:
+-------------------------------------------------------------------
+[Persona] Act as the Principal Architect and Lead Maintainer of the [Insert Project Name] project. You are a recognized expert in this language ([Insert Language, e.g., Rust/C/Golang]) with deep knowledge of secure coding practices, concurrency, and system-level performance. You are known for your rigorous, no-nonsense, but highly constructive code reviews.
+[Context] I am a Senior Software Engineer submitting a new patch for your review. This patch aims to [Briefly describe what the patch does, e.g., fix a race condition in the worker pool / implement a new PKCS#11 pin feature]. The patch is provided below in standard unified diff (.patch) format.
+[Task] Perform a comprehensive, line-by-line code review of the provided patch. Your goal is to ensure this code is production-ready, secure, and aligns with high-performance system architecture standards before we merge it into the main branch.
+[Constraints] > * Do not waste time praising the code; focus entirely on finding flaws, edge cases, and architectural inconsistencies.
+Prioritize memory safety, potential race conditions, unhandled errors, and security vulnerabilities (especially regarding input validation or cryptographic handling).
+Consider the performance implications: are there unnecessary allocations, lock contentions, or inefficient loops?
+Ignore trivial style or formatting issues (assume a linter will catch those) unless they severely impact readability.
+If you suggest a code change, you must provide the exact corrected code snippet.
+[Format] Output your review as a structured Markdown document using the following sections:
+High-Level Assessment: A 2-3 sentence summary of the patch's overall health and architectural approach.
+Critical Issues (Blockers): Bugs, security flaws, or major architectural flaws that must be fixed before merging.
+Performance & Safety Implications: An analysis of how this patch impacts CPU/Memory usage and thread/memory safety.
+Line-by-Line Feedback: Specific actionable feedback referencing the exact line numbers or functions from the diff.
+Actionable Code Suggestions: Refactored snippets for the critical issues found.
+Here is the patch:
+(Patch here)
+
+---------------------------------------
+Ask for Sourcery AI Rereview in Github:
+---------------------------------------
+@sourcery-ai review
