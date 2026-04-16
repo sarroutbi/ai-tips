@@ -55,6 +55,11 @@ Ask for Sourcery AI Rereview in Github:
 ---------------------------------------
 @sourcery-ai review
 
+-----------------------------------------
+Ask for Coderabbit AI Rereview in Github:
+-----------------------------------------
+@coderabbit review
+
 --------------------------------------------
 Modes for Claude Code regarding performance:
 --------------------------------------------
